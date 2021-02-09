@@ -228,6 +228,7 @@
           width:600px;
           border: 0.5px solid white;
           position: relative;
+          margin: auto;
         }
         #catalog-items-image img{     
           vertical-align: top;     
@@ -338,4 +339,34 @@
       font-size: 0.6rem;
       letter-spacing: 1px;
     }
+    .glide{
+      display:flex;
+      height: 250px;
+    }
+    .catalog-detail-arrow{    
+     flex:1;
+     position:relative;
+    }
+    .catalog-detail-arrow button{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+     }
+     .catalog-detail-slide{
+       flex:3;
+     }
+     .glide__slides{
+      height: 100%;
+     }
+     .glide__slide{
+      align-items: center;
+     }
+     .glide__slide img{
+      width:100%;
+      height:100%;
+     }
+     
+
+
 

@@ -1,6 +1,7 @@
 $(document).ready(function () {
-   // $('body').prop('style', 'overflow:hidden;background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(/static/backgrounddesk2.jpg)')
+    // $('body').prop('style', 'overflow:hidden;background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(/static/backgrounddesk2.jpg)')
 
+    // new Glide('.glide', config).mount();
 
     function eleToCenterTop(id) {
         var topStr = (parseInt(document.getElementById(id).parentNode.clientHeight) - parseInt(document.getElementById(id).clientHeight)) * 0.5;
@@ -80,13 +81,36 @@ $(document).ready(function () {
 
 
 });
-$('#catalog-image-hover').click(function (e) { 
+$('#catalog-image-hover').click(function (e) {
     $('#myModal').modal('show');
     const modalBg = $('.modal-backdrop').get(0);
     $('#modal-dialog-control').append(modalBg);
-   
+
+
+
+
 
 })
+var observer = new IntersectionObserver(function(entries) {
+	// isIntersecting is true when element and viewport are overlapping
+	// isIntersecting is false when element and viewport don't overlap
+	if(entries[0].isIntersecting === true)
+        new Glide('.glide', {
+        type:"carousel",        
+        perView: 1
+        }).mount();
+        //取得窗格寬與高
+        const slideWidth = $('.catalog-detail-slide').width();
+        const slideHeight = $('.catalog-detail-slide').height();
+        //設置div寬與高
+        [...$('.glide__slide div').get()].forEach((ele)=>{
+            ele.style.width=`${slideWidth}px`;
+        ele.style.height=`${slideHeight}px`;
+        })
+
+}, { threshold: [0] });
+
+observer.observe(document.querySelector("#myModal"));
 
 
 
