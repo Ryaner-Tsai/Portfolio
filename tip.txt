@@ -1,0 +1,1 @@
+`venv\Scripts\activate` 激活虛擬環境
