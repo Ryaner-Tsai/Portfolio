@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="{% static 'openicon/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
+    <script src="{% static '/snake/snakeMain.js' %}" defer type="module"></script>
+    <title>Snake</title>
+</head>
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: black;
+    }
+
+    #grid-board {
+        width: 100vmin;
+        height: 100vmin;
+        position: relative;
+        display: grid;
+        margin: 0;
+        background-color: white;
+        border: 1px solid red;
+        grid-template-columns: repeat(21, 1fr);
+        grid-template-rows: repeat(21, 1fr);
+        grid-gap: 0px;
+    }
+
+    .snake {
+        background-color: blue;
+        border: 1px solid black;
+    }
+
+    .food {
+        background-color: yellow;
+        border: 1px solid black;
+    }
+
+    #gameCenter {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        color: white;
+        background: #C80026;
+        opacity: 0.7;
+        box-shadow: 1px;
+        box-shadow: 2.5px 2.5px grey;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        display: none;
+
+
+    }
+</style>
+
+<body>
+    <!-- 建立grid系統 -->
+    <div id="grid-board">
+        <div id="gameCenter"></div>
+
+    </div>
+</body>
+
+</html>

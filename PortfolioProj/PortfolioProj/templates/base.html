@@ -10,7 +10,7 @@
     <title>Ryan Tsai</title>
 
     <!-- Bootstrap core CSS -->
-
+    <link rel="icon" href="{% static 'registered.svg' %}" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="{% static 'openicon/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{% static 'glide.theme.min.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/releases/latest/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
+
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous"></script>-->
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
@@ -33,35 +33,45 @@
 <body id="body" >
 
 <header>
-    <nav style="width:100%" class="row no-gutters nav" >
-        <a href="{% url 'home' %}" id="home">Ryan Tsai</a>
-        <div id="contact_info" class="row no-gutters " style="display: flex;margin-left: auto;">
-            <div id="facebook_box" class="">
-                <a href="#">
-                    <img class="contact-icon" src="{% static 'facebookblue.svg' %}" >
-                </a>
-            </div>
-            <div id="gmail_box" class="">
-                <a href="#">
-                    <img class="contact-icon" src="{% static 'gmailred2.svg' %}" >
-                </a>
-            </div>
-            <div id="github_box" class="">
-                <a href="#">
-                    <img class="contact-icon" src="{% static 'githubblack.svg' %}">
-                </a>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ">        
+        <a href="{% url 'home' %}" id="home" >Ryan Tsai</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ml-auto  nav-icon-box">
+                <div id="gmail_box" class="nav-icon-box" >
+                    <a href="mailto:eddie456858@gmail.com" class="nav-contact-icon" target="_blank">
+                        <img class="contact-icon" title="Gmail" src="{% static 'gmailred2.svg' %}" >
+                    </a>
+                </div>
+            </li> 
+            <li class="nav-item ml-auto ">
+                <div id="facebook_box" class="nav-icon-box" >
+                    <a href="https://www.facebook.com/" class="nav-contact-icon" target="_blank">
+                        <img class="contact-icon" title="Facebook" src="{% static 'facebookblue.svg' %}" >
+                    </a>
+                </div>
+            </li>
+              
+            <li class="nav-item ml-auto  nav-icon-box">
+                <div id="github_box" class="nav-icon-box">
+                    <a href="https://github.com/Ryaner-Tsai/Portfolio" class="nav-contact-icon" target="_blank">
+                        <img class="contact-icon" title="GitHub" src="{% static 'githubwhite2.svg' %}">
+                    </a>
+                </div>
+            </li>           
+           
+          </ul>
+         
         </div>
+      </nav>
     </nav>
 </header>
-<div id="fp-nav" class="">
-    <ul>
-        <li class="line"><a href="#top" ><span></span></a></li>
-        <li class="line"><a href="#reile" ><span></span></a></li>
-        <li class="line"><a href="#about" ><span></span></a></li>
-        <li class="line"><a href="#contact"><span></span></a></li>
-    </ul>
-</div>
+
 <div id="fullpage">
 {% block content %}
 
@@ -75,26 +85,17 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-<script  src="{% static 'main.js'  %}">  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+
 <script src="{% static 'fullpage.js' %}"></script>
+<script  src="{% static 'main.js'  %}">  </script>
+
 
 <script>
 
-    new fullpage('#fullpage', {
-	//options here
-	autoScrolling:true,
-
-});
-
-//methods
-fullpage_api.setAllowScrolling(true);
 </script>
 
 
 
-<script>
-
-    </script>
 </body>
 </html>

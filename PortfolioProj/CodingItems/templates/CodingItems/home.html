@@ -28,7 +28,7 @@
 					<path fill="none" stroke="white" stroke-width="2"
 						d="M667.1,18.5L667.1,18.5v67.3v0.1v11.4h-14V85.9v-0.1V18.6v-0.1V7.1h14V18.5z" />
 				</svg></div>
-			<div id="skill">Web Design | UI Design | Python Django | Python Scrapy</div>
+			<div id="skill">Web Design | UI Design | Javascript | Python Django</div>
 			<div id="portfolio"><svg>
 
 					<polygon fill="#C80026" points="0.2,-0.4 231.6,-0.4 231.6,36.2 0.2,36.2 	" />
@@ -63,7 +63,7 @@
 
 		</div>
 	</div>
-	<div class="arrow">
+	<div id="arrowDown" class="arrow">
 		<img src="{% static 'arrow2.svg' %}">
 	</div>
 	<div class="scroll-down"></div>
@@ -71,25 +71,17 @@
 <div id="catalog-section" class="section" style="display:none">
 	<div id="catalog-outside" class="container no-gutters">
 		<div id="catalog-title" class="row no-gutters justify-content-center">Catalog</div>
-		<div id="catalog-intro" class="row no-gutters justify-content-center">I had created some interesting staff with
-			following tools!
+		<div id="catalog-intro" class="row no-gutters justify-content-center">
+			I had created some interesting web page with following tools!	
+			
 		</div>
-		<div id="catalog-item-outside" class="row no-gutters justify-content-center">
-			<div data-title="Company Website">Css<br>
-				[Bootstrap]
-			</div>
-			<div data-title="Snake!">Javascript<br>
-				[AnimationFrame]
-			</div>
-			<div data-title="Get yout IP!">Javascript<br>
-				[Axios]</div>
-			<div data-title="New RC-PM">Python<br>[Numpy]
-			</div>
-			<div data-title="Popular Web spider">Python<br>[Scrapy]
-			</div>
+		<div>(Backend Of Webs:Python Django)</div>
+		<div id="catalog-item-outside" class="row no-gutters">
+			
 		</div>
 		<div id="catalog-items-title" class="row no-gutters justify-content-center">Title</div>
 		<div id="catalog-items-image" class="row no-gutters justify-content-center">
+			<div id="catalog-image-second-floor"></div>
 			<div id="catalog-image-hover"><span>SEE MORE...</span></div>
 
 
@@ -101,68 +93,53 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<div class="modal-title">
-							<img src="{% static 'css_logo2.svg' %}" alt="CSS">
+							<img id="catalog-detail-icon" src="{% static 'css_logo2.svg' %}" alt="CSS">
 							<div>
-								<p class="catalog-detail-title">CSS Web Design</p>
-								<p class="catalog-detail-proj">NTD company website</p>
-
+								<p id="catalog-detail-title">CSS Web Design</p>
+								<p id="catalog-detail-subtitle">NTD company website draft</p>
 							</div>
-							<button type="button" class="catalog-detail-view ml-auto btn">View</button>
-
+							<button type="button" class="catalog-detail-view ml-auto btn"
+								onclick="document.getElementById('catalog-detail-connect').click()">View</button>
+							<a id="catalog-detail-connect" target="_blank" href="http://157.230.90.126/" style="display:none"></a>
 						</div>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span>
 						</button>
 					</div>
 					<div class="modal-body">
-						<p>The NTD Website is very good
-							The NTD Website is very good
-							The NTD Website is very good
-							The NTD Website is very good
-							The NTD Website is very good
-							The NTD Website is very good
+						<p id="catalog-detail-intro">					
 						</p>
+						
 
 					</div>
-					<div class="modal-footer">
-						
-							<div class="glide" >
-								<div class="glide__arrows catalog-detail-arrow" data-glide-el="controls" >
-									 <button class="glide__arrow glide__arrow--left" data-glide-dir="<" >
-										 <div style="width:24px;height:24px"> <img src="{% static 'previous.svg' %}" >
-										 </div>
-									 </button>
-									<!--    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>  -->
-								</div>
-								<div class="glide__track catalog-detail-slide" data-glide-el="track">
-									<ul class="glide__slides">
-										
-					
-										<li class="glide__slide" style="width:30px">
-											<div><img src="{% static 'css_logo2.svg' %}" alt="CSS"></div>
-											
-										</li>
-										<li class="glide__slide">
-											<div><img src="{% static 'css_logo2.svg' %}" alt="CSS"></div>
-										</li>
-										<li class="glide__slide">
-											<div><img src="{% static 'css_logo2.svg' %}" alt="CSS"></div>
-										</li>
+					<div id="modal-footer" class="modal-footer">
 
-					
-									
-									</ul>
-								</div>
-								<div class="glide__arrows catalog-detail-arrow" data-glide-el="controls">
-					<!--                <button >next</button>-->
-									<!--   <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>      -->
-										<button class="glide__arrow glide__arrow--right" data-glide-dir=">" >
-											<div style="width:24px;height:24px"> <img src="{% static 'next.svg' %}" >
-											</div>
-										</button>
-								</div>
+						<div id="glide" class="glide">
+							<div class="glide__arrows catalog-detail-arrow" data-glide-el="controls">
+								<button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+									<div style="width:24px;height:24px"> <img src="{% static 'previous.svg' %}">
+									</div>
+								</button>
+								<!--    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>  -->
 							</div>
-						
+							<div  class="glide__track catalog-detail-slide" data-glide-el="track">
+								<ul class="glide__slides">
+									<li  class="glide__slide g0" style="width:30px"><div><img></div></li>
+									<li  class="glide__slide g1" style="width:30px"><div><img></div></li>
+									<li  class="glide__slide g2" style="width:30px"><div><img></div></li>
+									<li  class="glide__slide g3" style="width:30px"><div><img></div></li>
+
+
+								</ul>
+							</div>
+							<div class="glide__arrows catalog-detail-arrow" data-glide-el="controls">								
+								<button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+									<div style="width:24px;height:24px"> <img src="{% static 'next.svg' %}">
+									</div>
+								</button>
+							</div>
+						</div>
+
 
 					</div>
 
@@ -176,7 +153,12 @@
 
 
 	</div>
+	<div id="arrowUp" class="arrow">
+		<img src="{% static 'arrow3.svg' %}">
+	</div>
+	
 </div>
 </div>
+
 </div>
 {% endblock %}

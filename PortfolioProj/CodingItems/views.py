@@ -5,3 +5,9 @@ from django.shortcuts import render
 def home(request):
 
     return render(request, 'CodingItems/home.html')
+
+def snake(request):
+    return render(request,'CodingItems/snake.html')
+
+def getip(request):
+    return render(request,'CodingItems/getip.html')
