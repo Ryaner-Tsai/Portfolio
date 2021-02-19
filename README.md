@@ -28,11 +28,12 @@
 - [Numpy](https://numpy.org/)
 - [Scrapy](https://scrapy.org/)
 
-# Other Skill
 
-- TOEIC:750 (Listening Test:410 ; Reading Test:340)
-- Civil Engineer Certificate
-- Structure  Engineer Certificate
+# Other Skill
+- [TOEIC:750(Listening Test:410 ; Reading Test:340)](https://portfolio-ryan-tsai.herokuapp.com/static/readme/TOEIC.jpg) 
+- [Civil Engineer Certificate](https://portfolio-ryan-tsai.herokuapp.com/static/readme/civilEng.png) 
+- [Structure  Engineer Certificate](https://portfolio-ryan-tsai.herokuapp.com/static/readme/structureEng.jpg) 
+
 
 # Education&GPA
 - NTUST Bachelor &Master's Degree (Department of Civil and Construction Engineering)
