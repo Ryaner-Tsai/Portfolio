@@ -30,12 +30,12 @@
 
 
 # Other Skill
-- [TOEIC:750(Listening Test:410 ; Reading Test:340)](https://portfolio-ryan-tsai.herokuapp.com/static/readme/TOEIC.jpg) 
+- [TOEIC:750  (Listening Test:410 ; Reading Test:340)](https://portfolio-ryan-tsai.herokuapp.com/static/readme/TOEIC.jpg) 
 - [Civil Engineer Certificate](https://portfolio-ryan-tsai.herokuapp.com/static/readme/civilEng.png) 
 - [Structure  Engineer Certificate](https://portfolio-ryan-tsai.herokuapp.com/static/readme/structureEng.jpg) 
 
 
-# Education&GPA
+# Education & GPA
 - NTUST Bachelor &Master's Degree (Department of Civil and Construction Engineering)
 - Bachelor Degree GPA(2011~2014):
 <div>
