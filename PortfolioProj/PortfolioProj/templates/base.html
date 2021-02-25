@@ -10,19 +10,21 @@
     <title>Ryan Tsai</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="icon" href="{% static 'registered.svg' %}" type="image/gif" sizes="16x16">
+    <link rel="icon" href="{% static 'index/registered.svg' %}" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="{% static 'openicon/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'glide.core.min.css' %}">
-    <link rel="stylesheet" href="{% static 'glide.theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/glide.core.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/glide.theme.min.css' %}">
+    <link href="{% static 'css/style_computer.css' %}" rel="stylesheet">
+  
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/scrolloverflow.min.js" integrity="sha512-pYyQWhzi2lV+RM4GmaUA56VPL48oLVvsHmP9tuQ8MaZMDHomVEDjXXnfSVKXayy+wLclKPte0KbsuVoFImtE7w==" crossorigin="anonymous"></script>-->
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <link href="{% static 'style_computer.css' %}" rel="stylesheet">
+    
     
 
 
@@ -45,14 +47,14 @@
             <li class="nav-item ml-auto  nav-icon-box">
                 <div id="gmail_box" class="nav-icon-box" >
                     <a href="mailto:eddie456858@gmail.com" class="nav-contact-icon" target="_blank">
-                        <img class="contact-icon" title="Gmail" src="{% static 'gmailred2.svg' %}" >
+                        <img class="contact-icon" title="Gmail" src="{% static 'index/gmailred2.svg' %}" >
                     </a>
                 </div>
             </li> 
             <li class="nav-item ml-auto ">
                 <div id="facebook_box" class="nav-icon-box" >
                     <a href="https://www.facebook.com/" class="nav-contact-icon" target="_blank">
-                        <img class="contact-icon" title="Facebook" src="{% static 'facebookblue.svg' %}" >
+                        <img class="contact-icon" title="Facebook" src="{% static 'index/facebookblue.svg' %}" >
                     </a>
                 </div>
             </li>
@@ -60,7 +62,7 @@
             <li class="nav-item ml-auto  nav-icon-box">
                 <div id="github_box" class="nav-icon-box">
                     <a href="https://github.com/Ryaner-Tsai/Portfolio" class="nav-contact-icon" target="_blank">
-                        <img class="contact-icon" title="GitHub" src="{% static 'githubwhite2.svg' %}">
+                        <img class="contact-icon" title="GitHub" src="{% static 'index/githubwhite2.svg' %}">
                     </a>
                 </div>
             </li>           
@@ -68,10 +70,10 @@
           </ul>
          
         </div>
-      </nav>
+     
     </nav>
 </header>
-
+<div id="cover"></div>
 <div id="fullpage">
 {% block content %}
 
@@ -85,10 +87,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+<script src="{% static 'js/glide.js' %}"></script>
 
-<script src="{% static 'fullpage.js' %}"></script>
-<script  src="{% static 'main.js'  %}">  </script>
+
+<script src="{% static 'js/fullpage.js' %}"></script>
+<script  src="{% static 'js/main.js'  %}">  </script>
 
 
 <script>

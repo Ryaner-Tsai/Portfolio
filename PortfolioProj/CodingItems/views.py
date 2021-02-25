@@ -10,4 +10,7 @@ def snake(request):
     return render(request,'CodingItems/snake.html')
 
 def getip(request):
-    return render(request,'CodingItems/getip.html')
+    return render(request, 'CodingItems/getip.html')
+    
+def calculator(request):
+    return render(request,'CodingItems/calculator.html')

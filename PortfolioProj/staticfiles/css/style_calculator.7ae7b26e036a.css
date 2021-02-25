@@ -1,0 +1,28 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+}
+
+#calculator {
+    display: grid;
+    margin: 0;
+    background-color: white;
+    border: 1px solid red;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 0px;
+}
+
+.btn{
+
+}
+
+.operator{
+
+}
